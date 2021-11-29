@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D8EB7F22-9D38-4838-AF3E-B2037DAD7851}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CopyExpress</RootNamespace>
+    <AssemblyName>CopyExpress</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Common, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.6.0.0\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Primitives.4.3.0\lib\net45\System.Drawing.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Views\CRUDUsuarios.xaml.cs">
+      <DependentUpon>CRUDUsuarios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Usuarios.xaml.cs">
+      <DependentUpon>Usuarios.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Principal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CRUDUsuarios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Usuarios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Principal.xaml.cs">
+      <DependentUpon>Principal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\Recursos\Coonfiguracion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\Recursos\accept_16x16-32.gif" />
+    <Resource Include="Imagenes\Recursos\accept_24x24-32.gif" />
+    <Resource Include="Imagenes\Recursos\add_16x16-32.gif" />
+    <Resource Include="Imagenes\Recursos\add_24x24-32.gif" />
+    <Resource Include="Imagenes\Recursos\anular.png" />
+    <Resource Include="Imagenes\Recursos\anular_ico.ico" />
+    <Resource Include="Imagenes\Recursos\anular__32x32.png" />
+    <Resource Include="Imagenes\Recursos\app-edit_32x32-32.gif" />
+    <Resource Include="Imagenes\Recursos\atras.png" />
+    <Resource Include="Imagenes\Recursos\back_24x24-32.gif" />
+    <Resource Include="Imagenes\Recursos\Box.png" />
+    <Resource Include="Imagenes\Recursos\buscar.png" />
+    <Resource Include="Imagenes\Recursos\buscari.png" />
+    <Resource Include="Imagenes\Recursos\calendar.png" />
+    <Resource Include="Imagenes\Recursos\calendario1.png" />
+    <Resource Include="Imagenes\Recursos\cancelar.png" />
+    <Resource Include="Imagenes\Recursos\chart-accept_32x32-32.gif" />
+    <Resource Include="Imagenes\Recursos\CirculoNaranja24x24.png" />
+    <Resource Include="Imagenes\Recursos\circulorojo_24x24.png" />
+    <Resource Include="Imagenes\Recursos\circulo_verde24x24.png" />
+    <Resource Include="Imagenes\Recursos\ciudad.PNG" />
+    <Resource Include="Imagenes\Recursos\consultas.png" />
+    <Resource Include="Imagenes\Recursos\Delete_16x16-32.gif" />
+    <Resource Include="Imagenes\Recursos\editar.png" />
+    <Resource Include="Imagenes\Recursos\eliminar.PNG" />
+    <Resource Include="Imagenes\Recursos\guardar.png" />
+    <Resource Include="Imagenes\Recursos\help.png" />
+    <Resource Include="Imagenes\Recursos\home_32x32-32.gif" />
+    <Resource Include="Imagenes\Recursos\iconofactura %282%29.png" />
+    <Resource Include="Imagenes\Recursos\iconoreporte.png" />
+    <Resource Include="Imagenes\Recursos\images.png" />
+    <Resource Include="Imagenes\Recursos\limpiar.png" />
+    <Resource Include="Imagenes\Recursos\login.PNG" />
+    <Resource Include="Imagenes\Recursos\Login1.png" />
+    <Resource Include="Imagenes\Recursos\Logo.png" />
+    <Resource Include="Imagenes\Recursos\logoEmpresa.png" />
+    <Resource Include="Imagenes\Recursos\menuPrincipal.png" />
+    <Resource Include="Imagenes\Recursos\modificar.png" />
+    <Resource Include="Imagenes\Recursos\necesita_ayuda2.png" />
+    <Resource Include="Imagenes\Recursos\new.png" />
+    <Resource Include="Imagenes\Recursos\nuevo.png" />
+    <Resource Include="Imagenes\Recursos\pdf.png" />
+    <Resource Include="Imagenes\Recursos\Pie Diagram_32x32-32.gif" />
+    <Resource Include="Imagenes\Recursos\printer.png" />
+    <Resource Include="Imagenes\Recursos\PrinterSettings.png" />
+    <Resource Include="Imagenes\Recursos\producto_16x16.png" />
+    <Resource Include="Imagenes\Recursos\Recurso_2256_-_copia.ico" />
+    <Resource Include="Imagenes\Recursos\refresh.png" />
+    <Resource Include="Imagenes\Recursos\registro1.png" />
+    <Resource Include="Imagenes\Recursos\registros.png" />
+    <Resource Include="Imagenes\Recursos\remove_24x24-32.gif" />
+    <Resource Include="Imagenes\Recursos\reporte.PNG" />
+    <Resource Include="Imagenes\Recursos\reporte1.png" />
+    <Resource Include="Imagenes\Recursos\salir.PNG" />
+    <Resource Include="Imagenes\Recursos\search-add_24x24-32.gif" />
+    <Resource Include="Imagenes\Recursos\Search.png" />
+    <Resource Include="Imagenes\Recursos\Security 1_24x24-32.gif" />
+    <Resource Include="Imagenes\Recursos\Shopping cart_24x24.gif" />
+    <Resource Include="Imagenes\Recursos\Shopping cart_32x32-32.gif" />
+    <Resource Include="Imagenes\Recursos\user-comment_32x32-32.gif" />
+    <Resource Include="Imagenes\Recursos\users_16x16-32.gif" />
+    <Resource Include="Imagenes\Recursos\window-remove_24x24-32.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\Recursos\Info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\Recursos\Minimizat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\Recursos\Minimizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\Recursos\Cerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\Recursos\Menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\Recursos\Home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\Recursos\tienda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\Recursos\Productos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\Recursos\Usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\Recursos\Privilegios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\Privilegios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\minimizar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\caduceo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\caduceo1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
