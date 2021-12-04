@@ -65,8 +65,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Views\CRUBproductos.xaml.cs">
+      <DependentUpon>CRUBproductos.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\CRUDUsuarios.xaml.cs">
       <DependentUpon>CRUDUsuarios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MAntenimientoProductos.xaml.cs">
+      <DependentUpon>MAntenimientoProductos.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Usuarios.xaml.cs">
       <DependentUpon>Usuarios.xaml</DependentUpon>
@@ -87,7 +93,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\CRUBproductos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\CRUDUsuarios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MAntenimientoProductos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -240,6 +254,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Imagenes\caduceo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\Caja.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

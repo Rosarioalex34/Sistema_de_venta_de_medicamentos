@@ -42,7 +42,17 @@ namespace CopyExpress
 
         private void Usuarios_Click(object sender, RoutedEventArgs e)
         {
-            DataContext = new Usuarios();
+            Content = new Usuarios();
+        }
+
+        private void BtnProductos_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void Informacion(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Esto es un prototipo de un sistema de farmacia o consultorio :)");
         }
     }
 }

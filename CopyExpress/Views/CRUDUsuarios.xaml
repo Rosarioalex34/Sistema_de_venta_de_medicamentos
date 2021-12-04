@@ -249,7 +249,8 @@
                     Width="100"
                     Content="Cambiar Imagen"
                     Background="#82b3c9"
-                    Style="{DynamicResource ButtonStyle}" Click="Subir"
+                    Style="{DynamicResource ButtonStyle}" 
+                    Click="Subir"
                     />
             <TextBlock Text="Usuario: "
                        Grid.Column="4"

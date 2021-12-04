@@ -21,3 +21,7 @@ C:\Users\hiero\source\repos\CopyExpress\CopyExpress\obj\Debug\Views\CRUDUsuarios
 C:\Users\hiero\source\repos\CopyExpress\CopyExpress\obj\Debug\Views\CRUDUsuarios.baml
 C:\Users\hiero\source\repos\CopyExpress\CopyExpress\bin\Debug\System.Drawing.Common.dll
 C:\Users\hiero\source\repos\CopyExpress\CopyExpress\bin\Debug\System.Drawing.Common.xml
+C:\Users\hiero\source\repos\CopyExpress\CopyExpress\obj\Debug\Views\CRUBproductos.g.cs
+C:\Users\hiero\source\repos\CopyExpress\CopyExpress\obj\Debug\Views\CRUBproductos.baml
+C:\Users\hiero\source\repos\CopyExpress\CopyExpress\obj\Debug\Views\MAntenimientoProductos.g.cs
+C:\Users\hiero\source\repos\CopyExpress\CopyExpress\obj\Debug\GeneratedInternalTypeHelper.g.cs
